@@ -20,8 +20,6 @@ class _GreenButtonState extends State<GreenButton> {
     final double height = MediaQuery.of(context).size.height;
 
     return Container(
-      width: width,
-      padding: const EdgeInsets.all(24),
       child: TextButton(
         style: ButtonStyle(
           padding: const WidgetStatePropertyAll(EdgeInsets.all(18)),

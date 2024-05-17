@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_app/components/buttons.dart';
 import 'package:mobile_app/components/images.dart';
+import 'package:mobile_app/screens/login.dart';
 import 'package:mobile_app/utilities/constants.dart';
 
 class OnBoardingScreen extends StatefulWidget {
@@ -44,6 +45,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           color: Theme.of(context).scaffoldBackgroundColor,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               CirCularImage(imgUrl: 'images/Charcoal-$screenNumber.png'),
               Container(
@@ -149,9 +151,19 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               //GET STARTED BUTTON
 
               if (screenNumber == 3)
-                GreenButton(
-                  labelText: 'Get Started',
-                  onPressed: () {},
+                Container(
+                  padding: const EdgeInsets.all(12),
+                  child: GreenButton(
+                    labelText: 'Get Started',
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const LoginScreen(),
+                        ),
+                      );
+                    },
+                  ),
                 ),
             ],
           ),
