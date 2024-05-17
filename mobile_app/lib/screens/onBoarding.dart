@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_app/components/buttons.dart';
+import 'package:mobile_app/components/images.dart';
 import 'package:mobile_app/utilities/constants.dart';
 
 class OnBoardingScreen extends StatefulWidget {
@@ -44,18 +45,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                height: height * 0.55,
-                width: width,
-                clipBehavior: Clip.antiAlias,
-                decoration: const BoxDecoration(
-                  shape: BoxShape.circle,
-                ),
-                child: Image.asset(
-                  'images/Charcoal-$screenNumber.png',
-                  fit: BoxFit.cover,
-                ),
-              ),
+              CirCularImage(imgUrl: 'images/Charcoal-$screenNumber.png'),
               Container(
                 padding: EdgeInsets.all(width * 0.02),
                 child: Column(
