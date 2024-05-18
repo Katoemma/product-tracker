@@ -16,21 +16,9 @@ class GreenButton extends StatefulWidget {
 class _GreenButtonState extends State<GreenButton> {
   @override
   Widget build(BuildContext context) {
-    final double width = MediaQuery.of(context).size.width;
-    final double height = MediaQuery.of(context).size.height;
-
     return Container(
       child: TextButton(
-        style: ButtonStyle(
-          padding: const WidgetStatePropertyAll(EdgeInsets.all(18)),
-          backgroundColor: const WidgetStatePropertyAll(primaryColor),
-          foregroundColor: const WidgetStatePropertyAll(Colors.white),
-          shape: WidgetStateProperty.all(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
-            ),
-          ),
-        ),
+        style: greenButtonStyle,
         onPressed: () {
           widget.onPressed();
         },

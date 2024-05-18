@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_app/screens/login.dart';
 import 'package:mobile_app/screens/onBoarding.dart';
 import 'package:mobile_app/utilities/constants.dart';
 
@@ -17,12 +16,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        focusColor: Colors.white,
+        cardColor: Colors.white,
         colorScheme: ColorScheme.fromSeed(
           seedColor: primaryColor,
         ),
         useMaterial3: true,
       ),
       darkTheme: ThemeData(
+        focusColor: Colors.grey[900]?.withOpacity(0.5),
         colorScheme: ColorScheme.fromSeed(
           primary: primaryColor,
           secondary: subTextColor,

@@ -4,6 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_app/components/auth/header.dart';
 import 'package:mobile_app/components/auth/inputs.dart';
 import 'package:mobile_app/components/buttons.dart';
+import 'package:mobile_app/screens/ChangePassword.dart';
+import 'package:mobile_app/screens/Home.dart';
 import 'package:mobile_app/screens/register.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -43,7 +45,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
 
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ChangePasswordScreen(),
+                      ),
+                    );
+                  },
                   child: Text(
                     'Forgot Password?',
                     style: GoogleFonts.poppins(
@@ -62,7 +71,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 // login button
                 GreenButton(
                   labelText: 'Login',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return const HomeScreen();
+                        },
+                      ),
+                    );
+                  },
                 ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.03,
